@@ -32,10 +32,8 @@ function Portfolio() {
       });
   }, []);
 
-  /* console.log(filter) */
-  /* console.log(data) */
   return (
-    <div className="w-full md:h-full h-screen py-10 bg-zinc-800">
+    <div className={`w-full py-10 bg-zinc-800 ${filter.length > 1 ? "h-full" : "h-screen"}`}>
       <Container>
         <div className="flex justify-between text-sky-600 mb-3">
           <h1>Portfolio.</h1>

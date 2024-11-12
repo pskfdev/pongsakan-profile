@@ -155,7 +155,7 @@ function Resume() {
               <p className="mb-2 mt-4">
                 CSS{" "}
                 <span className="text-sm text-zinc-400">
-                  (Sass, Bootstrap, Tailwind, Mui)
+                  (Sass, Bootstrap, Tailwind, Mui, Shadcn, DaisyUI)
                 </span>
               </p>
               <div className="flex items-center w-full">
@@ -172,7 +172,7 @@ function Resume() {
               </div>
 
               <p className="mb-2 mt-4">
-                JS{" "}
+                JS, TS{" "}
                 <span className="text-sm text-zinc-400">
                   (ES6, Jquery, Ajax)
                 </span>
@@ -191,7 +191,7 @@ function Resume() {
               </div>
 
               <p className="mb-2 mt-4">
-                REACT <span className="text-sm text-zinc-400">(Redux)</span>
+                REACT, NEXT, VUE <span className="text-sm text-zinc-400">(Redux, Pinia)</span>
               </p>
               <div className="flex items-center w-full">
                 <div className="w-full mr-2">

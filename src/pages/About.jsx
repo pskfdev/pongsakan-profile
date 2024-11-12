@@ -58,7 +58,7 @@ function About() {
                   Pongsakan Obromkin
                 </p>
                 <p>
-                  <span className="text-under-line font-bold">Age</span> : 26
+                  <span className="text-under-line font-bold">Age</span> : 28
                   Years
                 </p>
                 <p>

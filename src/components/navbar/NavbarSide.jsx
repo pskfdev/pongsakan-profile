@@ -1,6 +1,13 @@
 import React from "react";
 import { MenuList, MenuItem, Slide, ListItemIcon } from "@mui/material";
-import { FiHome, FiUser, FiEdit, FiBriefcase, FiPhoneCall } from "react-icons/fi";
+import {
+  FiHome,
+  FiUser,
+  FiEdit,
+  FiBriefcase,
+  FiPhoneCall,
+} from "react-icons/fi";
+import { FaFacebookSquare, FaInstagram, FaGithub } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
 function NavbarSide({ show, setShow }) {
@@ -22,7 +29,11 @@ function NavbarSide({ show, setShow }) {
         <div className="border-y border-zinc-800">
           <MenuList className="text-zinc-500 divide-y divide-zinc-800 p-0 nav-active">
             <div className="py-2">
-              <MenuItem component={NavLink} to="/" onClick={() => setShow(false)}>
+              <MenuItem
+                component={NavLink}
+                to="/"
+                onClick={() => setShow(false)}
+              >
                 <ListItemIcon>
                   <FiHome className="text-zinc-500" />
                 </ListItemIcon>
@@ -30,7 +41,11 @@ function NavbarSide({ show, setShow }) {
               </MenuItem>
             </div>
             <div className="py-2">
-              <MenuItem component={NavLink} to="/about" onClick={() => setShow(false)}>
+              <MenuItem
+                component={NavLink}
+                to="/about"
+                onClick={() => setShow(false)}
+              >
                 <ListItemIcon>
                   <FiUser className="text-zinc-500" />
                 </ListItemIcon>
@@ -38,7 +53,11 @@ function NavbarSide({ show, setShow }) {
               </MenuItem>
             </div>
             <div className="py-2">
-              <MenuItem component={NavLink} to="/resume" onClick={() => setShow(false)}>
+              <MenuItem
+                component={NavLink}
+                to="/resume"
+                onClick={() => setShow(false)}
+              >
                 <ListItemIcon>
                   <FiEdit className="text-zinc-500" />
                 </ListItemIcon>
@@ -46,7 +65,11 @@ function NavbarSide({ show, setShow }) {
               </MenuItem>
             </div>
             <div className="py-2">
-              <MenuItem component={NavLink} to="/portfolio" onClick={() => setShow(false)}>
+              <MenuItem
+                component={NavLink}
+                to="/portfolio"
+                onClick={() => setShow(false)}
+              >
                 <ListItemIcon>
                   <FiBriefcase className="text-zinc-500" />
                 </ListItemIcon>
@@ -54,7 +77,11 @@ function NavbarSide({ show, setShow }) {
               </MenuItem>
             </div>
             <div className="py-2">
-              <MenuItem component={NavLink} to="/contact" onClick={() => setShow(false)}>
+              <MenuItem
+                component={NavLink}
+                to="/contact"
+                onClick={() => setShow(false)}
+              >
                 <ListItemIcon>
                   <FiPhoneCall className="text-zinc-500" />
                 </ListItemIcon>
@@ -66,10 +93,15 @@ function NavbarSide({ show, setShow }) {
         {/* Footer */}
         <div className="absolute w-full bottom-0 text-center text-zinc-500">
           <div className="w-full flex justify-center gap-x-3">
-            <FiEdit className="" />
-            <FiEdit className="" />
-            <FiEdit className="" />
-            <FiEdit className="" />
+            <a href="https://www.facebook.com/pongsakan.fluk/" target="_blank">
+              <FaFacebookSquare />
+            </a>
+            <a href="https://www.instagram.com/pskfluk/" target="_blank">
+              <FaInstagram />
+            </a>
+            <a href="https://github.com/pskfdev" target="_blank">
+              <FaGithub />
+            </a>
           </div>
           <p className="text-xs my-3">
             2023 © Pongsakn-Themes. All Right Reserved.
