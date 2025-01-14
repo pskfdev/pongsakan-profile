@@ -1,0 +1,107 @@
+[
+    {
+        "id": 0,
+        "name": "html",
+        "image": "/img/html.png"
+    },
+    {
+        "id": 1,
+        "name": "css",
+        "image": "/img/css.png"
+    },
+    {
+        "id": 2,
+        "name": "javascript",
+        "image": "/img/js.png"
+    },
+    {
+        "id": 3,
+        "name": "typescript",
+        "image": "/img/ts.png"
+    },
+    {
+        "id": 4,
+        "name": "node",
+        "image": "/img/node.png"
+    },
+    {
+        "id": 5,
+        "name": "vite",
+        "image": "/img/vite.png"
+    },
+    {
+        "id": 6,
+        "name": "react",
+        "image": "/img/react.png"
+    },
+    {
+        "id": 7,
+        "name": "vue",
+        "image": "/img/vue.png"
+    },
+    {
+        "id": 8,
+        "name": "next",
+        "image": "/img/nextjs.png"
+    },
+    {
+        "id": 9,
+        "name": "express",
+        "image": "/img/expressjs.png"
+    },
+    {
+        "id": 10,
+        "name": "redux",
+        "image": "/img/redux.png"
+    },
+    {
+        "id": 11,
+        "name": "mysql",
+        "image": "/img/mysql.png"
+    },
+    {
+        "id": 12,
+        "name": "prisma",
+        "image": "/img/prisma.png"
+    },
+    {
+        "id": 13,
+        "name": "bootstrap",
+        "image": "/img/bootstrap.png"
+    },
+    {
+        "id": 14,
+        "name": "tailwind",
+        "image": "/img/tailwind.png"
+    },
+    {
+        "id": 15,
+        "name": "shadcn",
+        "image": "/img/shadcn.png"
+    },
+    {
+        "id": 16,
+        "name": "mui",
+        "image": "/img/mui.png"
+    },
+    {
+        "id": 17,
+        "name": "git",
+        "image": "/img/git.png"
+    },
+    {
+        "id": 18,
+        "name": "figma",
+        "image": "/img/figma.png"
+    },
+    {
+        "id": 19,
+        "name": "xampp",
+        "image": "/img/xampp.png"
+    },
+    {
+        "id": 20,
+        "name": "postman",
+        "image": "/img/postman.png"
+    }
+]

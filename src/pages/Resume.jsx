@@ -1,9 +1,22 @@
-import React from "react";
-import { Button, Container, LinearProgress } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Container } from "@mui/material";
 import { FiEdit } from "react-icons/fi";
 import { Slide } from "react-awesome-reveal";
 
 function Resume() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`./data/Skills.json`)
+      .then((response) => response.json())
+      .then((res) => {
+        setData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="w-full h-full py-10 bg-zinc-800">
       <Container>
@@ -13,11 +26,13 @@ function Resume() {
         </div>
         <hr className="border-b border-dashed border-zinc-600" />
 
-        {/* //content1 */}
+        {/* Exp & EDU */}
         <Slide triggerOnce={true}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-11 text-neutral-200">
             <div>
-              <h2 className="text-center text-under-line">EXPERIENCE</h2>
+              <h2 className="text-center text-under-line underline-offset-8 tracking-widest">
+                EXPERIENCE
+              </h2>
               <br />
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">2019</p>
@@ -45,6 +60,7 @@ function Resume() {
                   <a
                     href="https://website-barber.web.app/"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-sm text-sky-600 font-semibold uppercase"
                   >
                     website barber shop
@@ -70,6 +86,7 @@ function Resume() {
                   <a
                     href="https://food-zero.vercel.app/"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-sm text-sky-600 font-semibold uppercase"
                   >
                     website food zero
@@ -90,7 +107,9 @@ function Resume() {
             </div>
 
             <div>
-              <h2 className="text-center text-under-line">EDUCATION</h2>
+              <h2 className="text-center text-under-line underline-offset-8 tracking-widest">
+                EDUCATION
+              </h2>
               <br />
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">2012</p>
@@ -132,148 +151,28 @@ function Resume() {
           </div>
         </Slide>
 
-        {/* //content2 */}
+        {/* Skills */}
         <Slide triggerOnce={true}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-neutral-200">
-            <div className="">
-              <h2 className="text-center text-under-line">HARD SKILLS</h2>
-              <br />
-              <p className="mb-2">HTML</p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={90}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">90%</p>
-                </div>
-              </div>
+          <div className="text-white">
+            <h2 className="text-center text-under-line underline-offset-8 tracking-widest">
+              HARD SKILLS
+            </h2>
 
-              <p className="mb-2 mt-4">
-                CSS{" "}
-                <span className="text-sm text-zinc-400">
-                  (Sass, Bootstrap, Tailwind, Mui, Shadcn, DaisyUI)
-                </span>
-              </p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={90}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">90%</p>
-                </div>
-              </div>
-
-              <p className="mb-2 mt-4">
-                JS, TS{" "}
-                <span className="text-sm text-zinc-400">
-                  (ES6, Jquery, Ajax)
-                </span>
-              </p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={70}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">70%</p>
-                </div>
-              </div>
-
-              <p className="mb-2 mt-4">
-                REACT, NEXT, VUE <span className="text-sm text-zinc-400">(Redux, Pinia)</span>
-              </p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={70}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">70%</p>
-                </div>
-              </div>
-
-              <p className="mb-2 mt-4">
-                API CALLS{" "}
-                <span className="text-sm text-zinc-400">
-                  (Fetch API, Axios)
-                </span>
-              </p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={70}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">70%</p>
-                </div>
-              </div>
-
-              <p className="mb-2 mt-4">
-                OTHER{" "}
-                <span className="text-sm text-zinc-400">
-                  (Git, Figma, Photoshop)
-                </span>
-              </p>
-              <div className="flex items-center w-full">
-                <div className="w-full mr-2">
-                  <LinearProgress
-                    className="h-4 rounded-md"
-                    value={70}
-                    variant="determinate"
-                  />
-                </div>
-                <div className="w-fit">
-                  <p className="">70%</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="">
-              <h2 className="text-center text-under-line">SOFT SKILLS</h2>
-              <div className="h-72 md:h-96 border-l-2 border-sky-600 my-10">
-                <div className="pl-10 uppercase text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-600">
-                  <ul>
-                    <li>
-                      <h3 className="">Creativity</h3>
-                    </li>
-                    <li>
-                      <h3>Collaboration</h3>
-                    </li>
-                    <li>
-                      <h3>Time Management</h3>
-                    </li>
-                    <li>
-                      <h3>Problem Solving</h3>
-                    </li>
-                    <li>
-                      <h3>Positive Attitude</h3>
-                    </li>
-                    <li>
-                      <h3>Emotional Intelligence</h3>
-                    </li>
-                    <li>
-                      <h3>Flexibility and Adaptability</h3>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="w-full flex flex-wrap justify-center items-center my-10 gap-5">
+              {data &&
+                data.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex flex-col justify-center items-center space-y-2 p-4 bg-zinc-800 cursor-pointer rounded-lg text-white shadow-xl transition ease-in-out duration-300 hover:hover:scale-110 hover:bg-blue-300 hover:shadow-blue-500/50 hover:font-semibold"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-24 h-24 object-cover rounded-lg"
+                    />
+                    <p className="uppercase">{item.name}</p>
+                  </div>
+                ))}
             </div>
           </div>
         </Slide>
