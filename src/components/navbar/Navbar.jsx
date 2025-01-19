@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Button,
   IconButton,
   MenuList,
   MenuItem,
@@ -17,7 +16,7 @@ import {
   FiPhoneCall,
 } from "react-icons/fi";
 import { FaFacebookSquare, FaInstagram, FaGithub } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavbarSide from "./NavbarSide";
 
 function Navbar() {
@@ -28,7 +27,7 @@ function Navbar() {
       <AppBar position="sticky" className="w-full md:hidden z-0">
         <Toolbar className="flex justify-center bg-neutral-900">
           <div className="text-center w-5/6">
-            <h2>Pongsakan</h2>
+            <h2 className="tracking-widest">Pongsakan</h2>
           </div>
 
           <IconButton
@@ -108,13 +107,13 @@ function Navbar() {
         {/* Footer */}
         <div className="absolute w-full bottom-0 text-center text-zinc-500">
           <div className="w-full flex justify-center gap-x-3">
-            <a href="https://www.facebook.com/pongsakan.fluk/" target="_blank">
+            <a href="https://www.facebook.com/pongsakan.fluk/" target="_blank" rel="noreferrer">
               <FaFacebookSquare />
             </a>
-            <a href="https://www.instagram.com/pskfluk/" target="_blank">
+            <a href="https://www.instagram.com/pskfluk/" target="_blank" rel="noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://github.com/pskfdev" target="_blank">
+            <a href="https://github.com/pskfdev" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
           </div>

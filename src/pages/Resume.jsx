@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container } from "@mui/material";
 import { FiEdit } from "react-icons/fi";
 import { Slide } from "react-awesome-reveal";
 
+//Components
+import HardSkills from "../components/sections/Hard-Skills";
+import SoftSkills from "../components/sections/Soft-Skills";
+
 function Resume() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`./data/Skills.json`)
-      .then((response) => response.json())
-      .then((res) => {
-        setData(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
   return (
     <div className="w-full h-full py-10 bg-zinc-800">
       <Container>
         <div className="flex justify-between text-sky-600 mb-3">
-          <h1>My Resume.</h1>
+          <h1 className="tracking-wider">My Resume.</h1>
           <FiEdit size={42} className="my-auto" />
         </div>
         <hr className="border-b border-dashed border-zinc-600" />
@@ -37,7 +28,7 @@ function Resume() {
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">2019</p>
                 <div className="p-5">
-                  <h3 className="uppercase">Technician and other</h3>
+                  <h3 className="uppercase tracking-widest">Technician IOT</h3>
                   <p className="text-sm text-sky-600 font-semibold uppercase">
                     Future Lifestyle Co.,Ltd, Samut Prakan
                   </p>
@@ -53,25 +44,24 @@ function Resume() {
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">Aug 2022</p>
                 <div className="p-5">
-                  <h3 className="uppercase">
-                    website barber shop{" "}
+                  <h3 className="uppercase tracking-widest">
+                    website hester{" "}
                     <span className="text-sky-700">(front-end)</span>
                   </h3>
                   <a
-                    href="https://website-barber.web.app/"
+                    href="https://hester.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                     className="text-sm text-sky-600 font-semibold uppercase"
                   >
-                    website barber shop
+                    website hester
                   </a>
                   <p>
                     It is a project made as a result of practicing coding a
-                    website using the React framework. Create UI and styled
-                    layouts using the HTML, CSS, and JS Styled component. Create
-                    local data in a json file and use the fetch API (JS) to
-                    retrieve data from it. functions of the website: find a
-                    hairstyle, view hairstyle details.
+                    website e-commerce using the React framework. Create UI and
+                    styled layouts using the HTML, CSS, and JS Styled component.
+                    Create local data in a json file and use the fetch API (JS)
+                    to retrieve data from it.
                   </p>
                 </div>
                 <p className="text-sm pl-2 text-zinc-400">Sept 2022</p>
@@ -79,7 +69,7 @@ function Resume() {
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">Nov 2022</p>
                 <div className="p-5">
-                  <h3 className="uppercase">
+                  <h3 className="uppercase tracking-widest">
                     website food zero{" "}
                     <span className="text-sky-700">(fullstack)</span>
                   </h3>
@@ -114,7 +104,7 @@ function Resume() {
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">2012</p>
                 <div className="p-5">
-                  <h3>MATHEMATICS-SCIENCE</h3>
+                  <h3 className="tracking-widest">MATHEMATICS-SCIENCE</h3>
                   <p className="text-sm text-sky-600 font-semibold">
                     SAMUTPRAKAN SCHOOL, SAMUT PRAKAN
                   </p>
@@ -130,7 +120,7 @@ function Resume() {
               <div className="border-l-2 border-sky-600 my-10">
                 <p className="text-sm pl-2 text-zinc-400">2015</p>
                 <div className="p-5">
-                  <h3>COMPUTER SCIENCE</h3>
+                  <h3 className="tracking-widest">COMPUTER SCIENCE</h3>
                   <p className="text-sm text-sky-600 font-semibold">
                     RAJAMANGALA UNIVERSITY OF TECHNOLOGY THANYABURI, PATHUM
                     THANI
@@ -152,30 +142,8 @@ function Resume() {
         </Slide>
 
         {/* Skills */}
-        <Slide triggerOnce={true}>
-          <div className="text-white">
-            <h2 className="text-center text-under-line underline-offset-8 tracking-widest">
-              HARD SKILLS
-            </h2>
-
-            <div className="w-full flex flex-wrap justify-center items-center my-10 gap-5">
-              {data &&
-                data.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex flex-col justify-center items-center space-y-2 p-4 bg-zinc-800 cursor-pointer rounded-lg text-white shadow-xl transition ease-in-out duration-300 hover:hover:scale-110 hover:bg-blue-300 hover:shadow-blue-500/50 hover:font-semibold"
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-24 h-24 object-cover rounded-lg"
-                    />
-                    <p className="uppercase">{item.name}</p>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </Slide>
+        <HardSkills />
+        <SoftSkills />
       </Container>
     </div>
   );

@@ -8,9 +8,9 @@ function About() {
   return (
     <div className="w-full h-full py-10 bg-zinc-800">
       <Container className="">
-        {/* h-[25rem] mx-auto */}
+        {/* Header */}
         <div className="flex justify-between text-sky-600 mb-3">
-          <h1>About me.</h1>
+          <h1 className="tracking-wider">About me.</h1>
           <FiUser size={42} className="my-auto" />
         </div>
         <hr className="border-b border-dashed border-zinc-600" />
@@ -18,7 +18,7 @@ function About() {
         <Slide triggerOnce={true}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-11">
             <div className="col-span-2 text-neutral-200">
-              <h2>
+              <h2 className="tracking-wider">
                 Technician IOT <span className="text-sky-600">&</span> Front-end
                 Developer
               </h2>
@@ -40,6 +40,7 @@ function About() {
                   <a
                     href="https://github.com/pskfdev"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-sky-600"
                   >
                     my GitHub.
@@ -51,8 +52,8 @@ function About() {
               </div>
             </div>
             <div className="flex flex-col justify-center lg:mx-auto mx-0 text-neutral-200">
-              <h2>Personal Information</h2>
-              <div className="my-3 leading-8">
+              <h2 className="tracking-wider">Personal Information</h2>
+              <div className="my-2 leading-8">
                 <p>
                   <span className="text-under-line font-bold">Name</span> :
                   Pongsakan Obromkin
@@ -77,6 +78,17 @@ function About() {
                   <span className="text-under-line font-bold">Phone</span> :
                   (+66) 96 884 5847
                 </p>
+                <p>
+                  <span className="text-under-line font-bold">Github</span> :
+                  <a
+                    href="https://github.com/pskfdev"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sky-600 pl-1"
+                  >
+                    pskfdev
+                  </a>
+                </p>
               </div>
               <Button
                 component={Link}
@@ -94,7 +106,7 @@ function About() {
 
         <Slide triggerOnce={true}>
           <div className="text-center text-neutral-200 my-20">
-            <h2 className="text-under-line">SKILLS</h2>
+            <h2 className="text-under-line tracking-widest">SKILLS</h2>
             <br />
             <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-7 my-5">
               <div>

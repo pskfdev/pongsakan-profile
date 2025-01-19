@@ -8,7 +8,7 @@ import {
   FiPhoneCall,
 } from "react-icons/fi";
 import { FaFacebookSquare, FaInstagram, FaGithub } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavbarSide({ show, setShow }) {
   return (
@@ -93,13 +93,13 @@ function NavbarSide({ show, setShow }) {
         {/* Footer */}
         <div className="absolute w-full bottom-0 text-center text-zinc-500">
           <div className="w-full flex justify-center gap-x-3">
-            <a href="https://www.facebook.com/pongsakan.fluk/" target="_blank">
+            <a href="https://www.facebook.com/pongsakan.fluk/" target="_blank" rel="noreferrer">
               <FaFacebookSquare />
             </a>
-            <a href="https://www.instagram.com/pskfluk/" target="_blank">
+            <a href="https://www.instagram.com/pskfluk/" target="_blank" rel="noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://github.com/pskfdev" target="_blank">
+            <a href="https://github.com/pskfdev" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
           </div>

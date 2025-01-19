@@ -36,14 +36,14 @@ function Contact() {
     <div className="w-full h-full pt-10 bg-zinc-800 text-neutral-200">
       <Container>
         <div className="flex justify-between text-sky-600 mb-3">
-          <h1>Contact.</h1>
+          <h1 className="tracking-wider">Contact.</h1>
           <FiPhoneCall size={42} className="my-auto" />
         </div>
         <hr className="border-b border-dashed border-zinc-600" />
 
         {/* //text head */}
         <div className="my-16">
-          <h2 className="text-center text-under-line uppercase">let's talk</h2>
+          <h2 className="text-center text-under-line uppercase tracking-wider">let's talk</h2>
         </div>
 
         {/* //content 1 */}

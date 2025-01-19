@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Container, Skeleton } from "@mui/material";
+import { Container, Skeleton } from "@mui/material";
 import { FiBriefcase } from "react-icons/fi";
 import { Slide } from "react-awesome-reveal";
 
@@ -36,7 +36,7 @@ function Portfolio() {
     <div className={`w-full py-10 bg-zinc-800 ${filter.length > 1 ? "h-full" : "h-screen"}`}>
       <Container>
         <div className="flex justify-between text-sky-600 mb-3">
-          <h1>Portfolio.</h1>
+          <h1 className="tracking-wider">Portfolio.</h1>
           <FiBriefcase size={42} className="my-auto" />
         </div>
         <hr className="border-b border-dashed border-zinc-600" />
@@ -96,14 +96,14 @@ function Portfolio() {
               <>
                 {filter.map((item) => (
                   <div
-                    className="w-full max-w-xs mx-auto hover:brightness-50 transition duration-300"
+                    className="w-full max-w-xs mx-auto hover:brightness-50 transition duration-300 rounded-lg overflow-hidden"
                     key={item.id}
                   >
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noreferrer">
                       <img
                         src={item.thumbnail}
                         alt={`port1 ${item.id}`}
-                        className="rounded-lg h-64 shadow-xl object-cover"
+                        className="h-64 shadow-xl object-cover transition duration-300 hover:scale-125"
                       />
                     </a>
                   </div>
